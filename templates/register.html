@@ -1,0 +1,28 @@
+{% extends "layout.html"%} {%block body%}
+<div class="content-section">
+  <!-- hidden_tag() is a part of security -->
+  <form action="" method="post">
+    {{from.hidden_tag()}}
+    <fieldset class="form-group">
+      <legend class="border-bottom mb-4">Join Today</legend>
+      <div class="form-group">
+        {{form.username.label(class="form-control-label")}}
+        {{form.username(class="form-control-label")}}
+      </div>
+      <div class="form-group">
+        {{form.email.label(class="form-control-label")}}
+        {{form.email(class="form-control-label")}}
+      </div>
+      <div class="form-group">
+        {{form.confirm_password.label(class="form-control-label")}}
+        {{form.confrim_password(class="form-control-label")}}
+      </div>
+    </fieldset>
+  </form>
+</div>
+<div>
+  <small>
+    Already have An acoount? <a class="ml-2", href="{{url_for('login')}}">Login</a>>
+  </small>
+</div>
+{%endblock body%}
